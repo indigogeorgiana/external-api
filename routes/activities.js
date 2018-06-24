@@ -26,9 +26,9 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const user = (req.body)
-  db.addUser(user)
-    .then(user => {
+  const activity = (req.body)
+  db.addActivity(activity)
+    .then(activity => {
       res.status(200).end()
     })
     .catch(err => {
