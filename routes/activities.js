@@ -16,9 +16,9 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   const id = Number(req.params.id)
-  db.getUser(id)
-    .then(user => {
-      res.json({user: user})
+  db.getActivity(id)
+    .then(activity => {
+      res.json({activity: activity})
     })
     .catch(err => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
