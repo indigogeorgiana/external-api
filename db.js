@@ -6,7 +6,8 @@ module.exports = {
   getUsers,
   getUser,
   addUser,
-  updateUser
+  updateUser,
+  getActivities
 }
 
 function getUsers (testDb) {
@@ -32,4 +33,7 @@ function updateUser (updatedUser, testDb) {
     .update(updatedUser)
 }
 
-
+function getActivities (testDb) {
+  const db = testDb || connection
+  return db('hobbies').select()
+}
