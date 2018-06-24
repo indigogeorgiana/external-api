@@ -31,3 +31,12 @@ test('getUser gets a user by ID', () => {
     })
 })
 
+test('addUser adds a new user to the DB', () => {
+  const expected = 1
+  const user = {name: 'test', email: 'test@email.com'}
+  return db.addUser(user, testDb)
+    .then(users => {
+      const actual = users.length
+      expect(actual).toBe(expected)
+    })
+})

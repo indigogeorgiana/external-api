@@ -31,3 +31,5 @@ function updateUser (updatedUser, testDb) {
     .where('id', updatedUser.id)
     .update(updatedUser)
 }
+
+
