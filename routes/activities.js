@@ -37,9 +37,9 @@ router.post('/', (req, res) => {
 })
 
 router.put('/', (req, res) => {
-  const updatedUser = (req.body)
-  db.updateUser(updatedUser)
-    .then(user => {
+  const updatedActivity = (req.body)
+  db.updateActivity(updatedActivity)
+    .then(activity => {
       res.status(200).end()
     })
     .catch(err => {
