@@ -47,10 +47,10 @@ router.put('/', (req, res) => {
     })
 })
 
-router.post('/', (req, res) => {
-  const updatedUser = (req.body)
-  db.updateUser(updatedUser)
-    .then(user => {
+router.delete('/', (req, res) => {
+  const killActivity = (req.body)
+  db.removeActivity(killActivity)
+    .then(activity => {
       res.status(200).end()
     })
     .catch(err => {
